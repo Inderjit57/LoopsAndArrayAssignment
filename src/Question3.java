@@ -1,3 +1,4 @@
+
 /*
 		 * Q3. Part 1 : Write a program which when given a phone brand name, shows all
 		 * the available products present in that category. Please use the below table
@@ -13,7 +14,7 @@ import java.util.Scanner;
 public class Question3 {
 
 	public static void main(String[] args) {
-		
+
 		// Part 1: All the available products present in that category
 		String[] samsung = { "S20", "S21", "Flip3", "Fold3" };
 		String[] google = { "Google Pixel 6", "Google Pixel 6 Pro", "Google Pixel Pro", "Google Pixel 5" };
@@ -23,8 +24,8 @@ public class Question3 {
 
 		System.out.println("Enter Brand Name");
 		String brandName = sc.next();
-		
-		//Using Switch case to get the list of all the brand products
+
+		// Using Switch case to get the list of all the brand products
 		switch (brandName) {
 		case "samsung": {
 			for (int s = 0; s < samsung.length; s++) {
@@ -32,25 +33,21 @@ public class Question3 {
 			}
 			break;
 		}
-
 		case "google": {
 			for (int g = 0; g < google.length; g++) {
 				System.out.println("Google product: " + google[g]);
 			}
 			break;
 		}
-
 		case "iPhone": {
 			for (int i = 0; i < iPhone.length; i++) {
 				System.out.println("iPhone product: " + iPhone[i]);
 			}
 			break;
 		}
-
 		default: {
 			System.out.println("Please select a product from the list");
 		}
-
 		}
 
 		// After displaying all the available products, ask user to enter one product
