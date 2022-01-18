@@ -1,4 +1,5 @@
 
+
 public class Question1 {
 
 	public static void main(String[] args) {
@@ -18,6 +19,11 @@ public class Question1 {
 				famousNames[1] = "Donald Trump";
 				famousNames[2] = "Santa Claus";
 				famousNames[3] = "Xi Jinping";
+				
+		// Third method of creating an array; using For Loop
+		for(int i=0; i<famousNames.length; i++) {
+			System.out.println(famousNames[i]);
+		}
 
 	}
 
