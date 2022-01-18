@@ -17,13 +17,10 @@ public class Question3 {
 
 		// Part 1: All the available products present in that category
 		String[] samsung = { "S20", "S21", "Flip3", "Fold3" };
-		String[] google = { "Google Pixel 6", "Google Pixel 6 Pro", "Google Pixel Pro", "Google Pixel 5" };
-		String[] iPhone = { "iPhone12", "iPhone12 Mini", "iPhone11", "iPhone11 Mini" };
+		String[] google = { "GooglePixel6", "GooglePixel6Pro", "GooglePixelPro", "GooglePixel5" };
+		String[] iPhone = { "iPhone12", "iPhone12Mini", "iPhone11", "iPhone11Mini" };
 
 		Scanner sc = new Scanner(System.in);
-		boolean isProductSamsung = false;
-		boolean isProductGoogle = false;
-		boolean isProductiPhone = false;
 
 		System.out.println("Enter Brand Name");
 		String brandName = sc.next();
@@ -42,7 +39,6 @@ public class Question3 {
 				if (!samsung[s].equals(askUserForSamsung)) {
 					continue;
 				} else if (samsung[s].equals(askUserForSamsung)) {
-					isProductSamsung = true;
 					System.out.println("Product selected is :" + samsung[s]);
 					break;
 				} else {
@@ -63,7 +59,6 @@ public class Question3 {
 				if (!google[g].equals(askUserForGoogle)) {
 					continue;
 				} else if (google[g].equals(askUserForGoogle)) {
-					isProductGoogle = true;
 					System.out.println("Product selected is :" + google[g]);
 					break;
 				} else {
@@ -84,7 +79,6 @@ public class Question3 {
 				if (!iPhone[i].equals(askUserForiPhone)) {
 					continue;
 				} else if (iPhone[i].equals(askUserForiPhone)) {
-					isProductiPhone = true;
 					System.out.println("Product selected is :" + iPhone[i]);
 					break;
 				} else {
