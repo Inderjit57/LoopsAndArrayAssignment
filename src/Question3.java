@@ -21,13 +21,16 @@ public class Question3 {
 		String[] iPhone = { "iPhone12", "iPhone12 Mini", "iPhone11", "iPhone11 Mini" };
 
 		Scanner sc = new Scanner(System.in);
+		boolean isProductSamsung = false;
+		boolean isProductGoogle = false;
+		boolean isProductiPhone = false;
 
 		System.out.println("Enter Brand Name");
 		String brandName = sc.next();
 
 		// Using Switch case to get the list of all the brand products
 		switch (brandName) {
-		case "samsung": {
+		case "samsung":
 			for (int s = 0; s < samsung.length; s++) {
 				System.out.println("Samsung product: " + samsung[s]);
 			}
@@ -36,17 +39,19 @@ public class Question3 {
 			String askUserForSamsung = sc.next(); // User asked for a Samsung product name
 
 			for (int s = 0; s < samsung.length; s++) {
-					if (samsung[s].equals(askUserForSamsung)) {
+				if (!samsung[s].equals(askUserForSamsung)) {
+					continue;
+				} else if (samsung[s].equals(askUserForSamsung)) {
+					isProductSamsung = true;
 					System.out.println("Product selected is :" + samsung[s]);
-					} // break;
-					else {
-					System.out.println("Please select a product from Samsung list");
 					break;
-					}
+				} else {
+					System.out.println("Please select a product from the Samsung list");
+				}
 			}
 			break;
-		}
-		case "google": {
+
+		case "google":
 			for (int g = 0; g < google.length; g++) {
 				System.out.println("Google product: " + google[g]);
 			}
@@ -55,18 +60,19 @@ public class Question3 {
 			String askUserForGoogle = sc.next(); // User is asked for a google product name
 
 			for (int g = 0; g < google.length; g++) {
-					if (askUserForGoogle.equals(google[g])) {
-						System.out.println("Product selected is :" + google[g]);
-					//break;
-					} else {
-					System.out.println("Please select a product from google list");
+				if (!google[g].equals(askUserForGoogle)) {
+					continue;
+				} else if (google[g].equals(askUserForGoogle)) {
+					isProductGoogle = true;
+					System.out.println("Product selected is :" + google[g]);
 					break;
-					}
+				} else {
+					System.out.println("Please select a product from the Google list");
+				}
 			}
 			break;
 
-		}
-		case "iPhone": {
+		case "iPhone":
 			for (int i = 0; i < iPhone.length; i++) {
 				System.out.println("iPhone product: " + iPhone[i]);
 			}
@@ -75,17 +81,18 @@ public class Question3 {
 			String askUserForiPhone = sc.next(); // User is asked for a iphone product name
 
 			for (int i = 0; i < iPhone.length; i++) {
-					if (askUserForiPhone.equals(iPhone[i])) {
+				if (!iPhone[i].equals(askUserForiPhone)) {
+					continue;
+				} else if (iPhone[i].equals(askUserForiPhone)) {
+					isProductiPhone = true;
 					System.out.println("Product selected is :" + iPhone[i]);
-					//break;
-					} else {
-					System.out.println("Please select a product from iPhone list");
 					break;
-					}
+				} else {
+					System.out.println("Please select a product from the iPhone list");
+				}
 			}
-
 			break;
-		}
+
 		default: {
 			System.out.println("Please select a Brand from the list: samsung/google/iPhone");
 		}
